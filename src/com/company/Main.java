@@ -18,7 +18,10 @@ public class Main {
 
 
         //冒泡排序
-        ArithmeticSortExamples.bubbleSort(array);
+//        ArithmeticSortExamples.bubbleSort(array);
+
+        //快速排序
+        ArithmeticSortExamples.quickSort(array, 0, array.length - 1);
 
         stringBuilder.delete(0, stringBuilder.length());
 
