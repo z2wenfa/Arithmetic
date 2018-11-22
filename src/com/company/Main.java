@@ -23,6 +23,10 @@ public class Main {
         //快速排序
         ArithmeticSortExamples.quickSort(array, 0, array.length - 1);
 
+
+        //选择排序
+        ArithmeticSortExamples.selectionSort(array);
+
         stringBuilder.delete(0, stringBuilder.length());
 
         for (int i : array) {
