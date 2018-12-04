@@ -6,7 +6,7 @@ public class QuickSort extends IArithmetic {
 
     @Override
     public void run() {
-        quickSort(arrs, 0, arrs.length);
+        quickSort(arrs, 0, arrs.length - 1);
     }
 
     @Override
@@ -14,7 +14,7 @@ public class QuickSort extends IArithmetic {
         return "快速排序";
     }
 
-    public void quickSort(int[] arrs, int _left, int _right) {
+    private void quickSort(int[] arrs, int _left, int _right) {
         int left = _left;
         int right = _right;
         int key = arrs[left];
