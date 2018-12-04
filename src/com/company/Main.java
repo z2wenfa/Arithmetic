@@ -1,7 +1,5 @@
 package com.company;
 
-import com.company.ArithmeticExamples.ArithmeticSortExamples;
-
 import java.util.Random;
 
 public class Main {
@@ -15,17 +13,6 @@ public class Main {
             stringBuilder.append(array[i]).append(" ");
         }
         System.out.println("Before sort:" + stringBuilder.toString());
-
-
-        //冒泡排序
-//        ArithmeticSortExamples.bubbleSort(array);
-
-        //快速排序
-        ArithmeticSortExamples.quickSort(array, 0, array.length - 1);
-
-
-        //选择排序
-        ArithmeticSortExamples.selectionSort(array);
 
         stringBuilder.delete(0, stringBuilder.length());
 
