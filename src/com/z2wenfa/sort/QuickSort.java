@@ -1,6 +1,6 @@
-package com.company.sort;
+package com.z2wenfa.sort;
 
-import com.company.IArithmetic;
+import com.z2wenfa.IArithmetic;
 
 public class QuickSort extends IArithmetic {
 

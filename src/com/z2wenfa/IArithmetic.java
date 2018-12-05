@@ -1,4 +1,4 @@
-package com.company;
+package com.z2wenfa;
 
 public abstract class IArithmetic {
     protected int[] arrs;

@@ -1,15 +1,12 @@
-package com.company;
+package com.z2wenfa;
 
-import com.company.sort.BubbleSort;
-import com.company.sort.InsertionSort;
-import com.company.sort.QuickSort;
-import com.company.sort.SelectionSort;
+import com.z2wenfa.sort.*;
 
 import java.util.Random;
 
 public class Main {
 
-    static Class<IArithmetic>[] sortArrs = new Class[]{BubbleSort.class, QuickSort.class, SelectionSort.class, InsertionSort.class};
+    static Class<IArithmetic>[] sortArrs = new Class[]{BubbleSort.class, QuickSort.class, SelectionSort.class, InsertionSort.class, ShellSort.class};
 
     public static void main(String[] args) {
         Random random = new Random();
