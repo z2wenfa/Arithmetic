@@ -1,11 +1,11 @@
 package com.z2wenfa.sort;
 
-import com.z2wenfa.IArithmetic;
+import com.z2wenfa.base.ISortArithmetic;
 
-public class BubbleSort extends IArithmetic {
+public class BubbleSort extends ISortArithmetic {
 
     @Override
-    public void run() {
+    public void sort() {
         bubbleSort(arrs);
     }
 

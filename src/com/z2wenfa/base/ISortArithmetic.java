@@ -1,14 +1,14 @@
-package com.z2wenfa;
+package com.z2wenfa.base;
 
-public abstract class IArithmetic {
+public abstract class ISortArithmetic {
     protected int[] arrs;
     private StringBuilder stringBuilder = new StringBuilder();
 
-    public abstract void run();
+    public abstract void sort();
 
     public abstract String getArithmeticName();
 
-    public void runAndPrint(int[] arrs) {
+    public void sortAndPrint(int[] arrs) {
         this.arrs = arrs;
         stringBuilder.append("------------").append(getArithmeticName()).append("------------").append("\n");
         stringBuilder.append("初始数据:[");
@@ -18,7 +18,7 @@ public abstract class IArithmetic {
         stringBuilder.append("]");
         System.out.println(stringBuilder.toString());
 
-        run();
+        sort();
 
         stringBuilder.delete(0, stringBuilder.length());
 

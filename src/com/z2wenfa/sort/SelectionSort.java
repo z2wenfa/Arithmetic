@@ -1,10 +1,10 @@
 package com.z2wenfa.sort;
 
-import com.z2wenfa.IArithmetic;
+import com.z2wenfa.base.ISortArithmetic;
 
-public class SelectionSort extends IArithmetic {
+public class SelectionSort extends ISortArithmetic {
     @Override
-    public void run() {
+    public void sort() {
         selectionSort(arrs);
     }
 
