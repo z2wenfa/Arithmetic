@@ -42,7 +42,7 @@ public class Main {
     private static void testSequenceSearch() {
         Random random = new Random();
         int[] array = new int[20];
-        for (Class<ISearchArithmetic> search : searchArrs) {
+        for (Class<ISearchArithmetic> search : sequenceSearchArrs) {
             for (int i = 0; i < 20; i++) {
                 array[i] = random.nextInt(100) + i * 100;
             }
