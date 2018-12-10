@@ -2,6 +2,7 @@ package com.z2wenfa;
 
 import com.z2wenfa.base.ISearchArithmetic;
 import com.z2wenfa.base.ISortArithmetic;
+import com.z2wenfa.search.BiSearch;
 import com.z2wenfa.search.SequenceSearch;
 import com.z2wenfa.sort.*;
 
@@ -14,9 +15,12 @@ public class Main {
 
     static Class<ISearchArithmetic>[] searchArrs = new Class[]{SequenceSearch.class};
 
+    static Class<ISearchArithmetic>[] sequenceSearchArrs = new Class[]{BiSearch.class};
+
     public static void main(String[] args) {
 //        testSort();
         testSearch();
+        testSequenceSearch();
     }
 
     private static void testSearch() {
@@ -25,6 +29,22 @@ public class Main {
         for (Class<ISearchArithmetic> search : searchArrs) {
             for (int i = 0; i < 20; i++) {
                 array[i] = random.nextInt(10000);
+            }
+            try {
+                ISearchArithmetic arithmetic = search.newInstance();
+                arithmetic.searchAndPrint(array);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private static void testSequenceSearch() {
+        Random random = new Random();
+        int[] array = new int[20];
+        for (Class<ISearchArithmetic> search : searchArrs) {
+            for (int i = 0; i < 20; i++) {
+                array[i] = random.nextInt(100) + i * 100;
             }
             try {
                 ISearchArithmetic arithmetic = search.newInstance();
