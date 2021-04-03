@@ -1,8 +1,13 @@
 package com.z2wenfa.sort;
 
 import com.z2wenfa.base.ISortArithmetic;
+import com.z2wenfa.util.ArrUtil;
 
 public class QuickSort extends ISortArithmetic {
+
+    public static void main(String[] args) {
+        new QuickSort().execute();
+    }
 
     @Override
     public void sort() {
@@ -14,30 +19,34 @@ public class QuickSort extends ISortArithmetic {
         return "快速排序";
     }
 
-    private void quickSort(int[] arrs, int _left, int _right) {
-        int left = _left;
-        int right = _right;
-        int key = arrs[left];
-        if (left <= right) {
-            while (left != right) {
-                while (right > left && arrs[right] >= key)
-                    right--;
-                if (arrs[right] < key) {
-                    int temp = arrs[left];
-                    arrs[left] = arrs[right];
-                    arrs[right] = temp;
-                }
-
-                while (left < right && arrs[left] <= key)
-                    left++;
-                if (arrs[left] > key) {
-                    int temp = arrs[left];
-                    arrs[left] = arrs[right];
-                    arrs[right] = temp;
-                }
-            }
-            if (left > _left) quickSort(arrs, _left, left - 1);
-            if (right < _right) quickSort(arrs, right + 1, _right);
+    private void quickSort(int[] arrs, int left, int right) {
+        int l = left;
+        int r = right;
+        int privot = arrs[(left + right) / 2];
+        if (l > r) return;
+        while (l != r) {
+            while (r > l && arrs[r] >= privot) r--;
+            if (arrs[r] < privot) ArrUtil.exchangeArrValue(arrs, l, r);
+            while (l < r && arrs[l] <= privot) l++;
+            if (arrs[l] > privot) ArrUtil.exchangeArrValue(arrs, l, r);
         }
+        if (l > left) quickSort(arrs, left, l - 1);
+        if (r < right) quickSort(arrs, r + 1, right);
     }
+
+    private void quickSortDemo(int[] arrs, int left, int right) {
+        int l = left;
+        int r = right;
+        int privot = arrs[(left + right) / 2];
+        if (l > r) return;
+        while (l != r) {
+            while (r > l && arrs[r] >= privot) r--;
+            if (arrs[r] < privot) ArrUtil.exchangeArrValue(arrs, l, r);
+            while (l < r && arrs[l] <= privot) l++;
+            if (arrs[l] > privot) ArrUtil.exchangeArrValue(arrs, l, r);
+        }
+        if (l > left) quickSort(arrs, left, l - 1);
+        if (r < right) quickSort(arrs, r + 1, right);
+    }
+
 }

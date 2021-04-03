@@ -4,16 +4,19 @@ import com.z2wenfa.base.ISortArithmetic;
 
 public class BubbleSort extends ISortArithmetic {
 
+    public static void main(String[] args) {
+        new BubbleSort().execute();
+    }
+
     @Override
-    public void sort() {
+    protected void sort() {
         bubbleSort(arrs);
     }
 
     @Override
-    public String getArithmeticName() {
+    protected String getArithmeticName() {
         return "冒泡排序";
     }
-
 
     private void bubbleSort(int[] arrs) {
         for (int i = 0; i < arrs.length - 1; i++) {
@@ -26,5 +29,4 @@ public class BubbleSort extends ISortArithmetic {
             }
         }
     }
-
 }
