@@ -22,7 +22,7 @@ public class QuickSort extends ISortArithmetic {
     private void quickSort(int[] arrs, int left, int right) {
         int l = left;
         int r = right;
-        int privot = arrs[(left + right) / 2];
+        int privot = arrs[left];
         if (l > r) return;
         while (l != r) {
             while (r > l && arrs[r] >= privot) r--;
@@ -33,20 +33,4 @@ public class QuickSort extends ISortArithmetic {
         if (l > left) quickSort(arrs, left, l - 1);
         if (r < right) quickSort(arrs, r + 1, right);
     }
-
-    private void quickSortDemo(int[] arrs, int left, int right) {
-        int l = left;
-        int r = right;
-        int privot = arrs[(left + right) / 2];
-        if (l > r) return;
-        while (l != r) {
-            while (r > l && arrs[r] >= privot) r--;
-            if (arrs[r] < privot) ArrUtil.exchangeArrValue(arrs, l, r);
-            while (l < r && arrs[l] <= privot) l++;
-            if (arrs[l] > privot) ArrUtil.exchangeArrValue(arrs, l, r);
-        }
-        if (l > left) quickSort(arrs, left, l - 1);
-        if (r < right) quickSort(arrs, r + 1, right);
-    }
-
 }
