@@ -33,4 +33,5 @@ public class QuickSort extends ISortArithmetic {
         if (l > left) quickSort(arrs, left, l - 1);
         if (r < right) quickSort(arrs, r + 1, right);
     }
+
 }
