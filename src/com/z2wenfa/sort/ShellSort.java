@@ -11,7 +11,7 @@ public class ShellSort extends ISortArithmetic {
 
     @Override
     public void sort() {
-        shellSortTest(arrs);
+        shellSort(arrs);
     }
 
     @Override
@@ -20,7 +20,7 @@ public class ShellSort extends ISortArithmetic {
     }
 
     private void shellSort(int[] arrs) {
-        if (arrs == null || arrs.length <= 1) return;
+        if (ArrUtil.checkArrayInValid(arrs)) return;
         int increment = arrs.length / 2;
         while (increment >= 1) {
             for (int i = 0; i < arrs.length; i++) {
@@ -32,16 +32,4 @@ public class ShellSort extends ISortArithmetic {
         }
     }
 
-    private void shellSortTest(int[] arrs) {
-        if (arrs == null || arrs.length <= 1) return;
-        int increment = arrs.length / 2;
-        while (increment >= 1) {
-            for (int i = 0; i < arrs.length; i++) {
-                for (int j = i + increment; j < arrs.length; j = j + increment) {
-                    if (arrs[j] < arrs[j - increment]) ArrUtil.exchangeArrValue(arrs, j, j - increment);
-                }
-            }
-            increment = increment/ 2;
-        }
-    }
 }

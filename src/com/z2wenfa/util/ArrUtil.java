@@ -10,4 +10,11 @@ public class ArrUtil {
         arr[first] = arr[second];
         arr[second] = temp;
     }
+
+    /**
+     * 判断数组是否有效
+     */
+    public static boolean checkArrayInValid(int[] arrs) {
+        return arrs == null || arrs.length < 1;
+    }
 }
