@@ -6,6 +6,11 @@ import com.z2wenfa.base.ISearchArithmetic;
  * 前提是序列有序
  */
 public class BiSearch extends ISearchArithmetic {
+
+    public static void main(String[] args) {
+        new BiSearch().execute();
+    }
+
     @Override
     public String getArithmeticName() {
         return "二分查找";
@@ -18,7 +23,7 @@ public class BiSearch extends ISearchArithmetic {
 
     private int biSearch(int[] arrs, int searchValue, int low, int high) {
         if (high > low) {
-            int middle = (high - low) / 2;
+            int middle = (high + low) / 2;
             if (arrs[middle] == searchValue) {
                 return middle + 1;
             } else if (arrs[middle] < searchValue) {

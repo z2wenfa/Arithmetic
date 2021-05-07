@@ -1,5 +1,7 @@
 package com.z2wenfa.base;
 
+import com.z2wenfa.util.RandomUtil;
+
 import java.util.Scanner;
 
 public abstract class ISearchArithmetic {
@@ -35,5 +37,7 @@ public abstract class ISearchArithmetic {
         System.out.println(stringBuilder.toString());
     }
 
-
+    public void execute() {
+        searchAndPrint(RandomUtil.getSerialArrays());
+    }
 }
