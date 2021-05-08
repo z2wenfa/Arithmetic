@@ -2,7 +2,14 @@ package com.z2wenfa.search;
 
 import com.z2wenfa.base.ISearchArithmetic;
 
+/**
+ * 顺序查找
+ */
 public class SequenceSearch extends ISearchArithmetic {
+
+    public static void main(String[] args) {
+        new SequenceSearch().execute();
+    }
 
     @Override
     public String getArithmeticName() {
