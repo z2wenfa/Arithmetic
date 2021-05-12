@@ -1,4 +1,4 @@
-package com.z2wenfa.leetcode.basic;
+package com.z2wenfa.leetcode.basic.array;
 
 /**
  * (初级算法)删除排序数组中的重复项
