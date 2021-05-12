@@ -1,4 +1,4 @@
-package com.z2wenfa.util;
+package com.z2wenfa.common.util;
 
 public class ArrUtil {
 

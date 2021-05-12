@@ -1,7 +1,7 @@
-package com.z2wenfa.sort;
+package com.z2wenfa.common.sort;
 
-import com.z2wenfa.base.ISortArithmetic;
-import com.z2wenfa.util.ArrUtil;
+import com.z2wenfa.common.base.ISortArithmetic;
+import com.z2wenfa.common.util.ArrUtil;
 
 public class InsertionSort extends ISortArithmetic {
 

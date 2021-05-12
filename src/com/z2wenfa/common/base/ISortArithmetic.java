@@ -1,6 +1,6 @@
-package com.z2wenfa.base;
+package com.z2wenfa.common.base;
 
-import com.z2wenfa.util.RandomUtil;
+import com.z2wenfa.common.util.RandomUtil;
 
 public abstract class ISortArithmetic {
 

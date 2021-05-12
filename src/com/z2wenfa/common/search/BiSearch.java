@@ -1,6 +1,6 @@
-package com.z2wenfa.search;
+package com.z2wenfa.common.search;
 
-import com.z2wenfa.base.ISearchArithmetic;
+import com.z2wenfa.common.base.ISearchArithmetic;
 
 /**
  * 二分查找,前提是序列有序

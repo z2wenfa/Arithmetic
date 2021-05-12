@@ -1,6 +1,6 @@
-package com.z2wenfa.search;
+package com.z2wenfa.common.search;
 
-import com.z2wenfa.base.ISearchArithmetic;
+import com.z2wenfa.common.base.ISearchArithmetic;
 
 /**
  * 插值查找 有序队列
