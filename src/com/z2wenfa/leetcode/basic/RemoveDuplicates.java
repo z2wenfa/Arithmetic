@@ -1,7 +1,7 @@
 package com.z2wenfa.leetcode.basic;
 
 /**
- * 删除排序数组中的重复项
+ * (初级算法)删除排序数组中的重复项
  */
 public class RemoveDuplicates {
 
